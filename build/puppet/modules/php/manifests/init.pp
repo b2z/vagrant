@@ -6,7 +6,7 @@ class php {
   }
 
   # Installs PHP and restarts Apache to load the module
-  package { ['php', 'php-pecl-xdebug', 'php-pecl-apc', 'php-gd', 'php-mbstring']:
+  package { ['php', 'php-mysql', 'php-pecl-xdebug', 'php-pecl-apc', 'php-gd', 'php-mbstring']:
     ensure  => installed,
     notify  => Service['apache2'],
     require => Package['apache2'],
